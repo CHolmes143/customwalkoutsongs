@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { songApprovalStatusLabel } from "@/lib/status";
 
+export const dynamic = "force-dynamic";
+
 export default async function SongVersionTrackerPage({ params }: { params: Promise<{ playerId: string }> }) {
   const { playerId } = await params;
   const player = await prisma.player.findUnique({

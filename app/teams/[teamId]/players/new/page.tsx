@@ -4,6 +4,8 @@ import { Field, MusicStyleCheckboxes } from "@/components/forms";
 import { createPlayer } from "@/lib/actions";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 export default async function NewPlayerPage({ params }: { params: Promise<{ teamId: string }> }) {
   const { teamId } = await params;
   const team = await prisma.team.findUnique({ where: { id: teamId } });

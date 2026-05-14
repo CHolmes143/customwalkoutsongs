@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { deliveryStatusLabel, playerStatusLabel, teamOrderStatusLabel } from "@/lib/status";
 
+export const dynamic = "force-dynamic";
+
 export default async function TeamDetailPage({ params }: { params: Promise<{ teamId: string }> }) {
   const { teamId } = await params;
   const team = await prisma.team.findUnique({

@@ -5,6 +5,8 @@ import { updateDelivery } from "@/lib/actions";
 import { prisma } from "@/lib/prisma";
 import { songApprovalStatusLabel } from "@/lib/status";
 
+export const dynamic = "force-dynamic";
+
 export default async function TeamDeliveryPage({ params }: { params: Promise<{ teamId: string }> }) {
   const { teamId } = await params;
   const team = await prisma.team.findUnique({

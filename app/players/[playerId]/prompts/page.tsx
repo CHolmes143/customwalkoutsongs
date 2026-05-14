@@ -4,6 +4,8 @@ import { CopyButton } from "@/components/CopyButton";
 import { generatePromptForPlayer } from "@/lib/actions";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 export default async function PromptGeneratorPage({ params }: { params: Promise<{ playerId: string }> }) {
   const { playerId } = await params;
   const player = await prisma.player.findUnique({

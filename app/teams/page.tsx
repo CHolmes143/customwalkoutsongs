@@ -2,6 +2,8 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { teamOrderStatusLabel } from "@/lib/status";
 
+export const dynamic = "force-dynamic";
+
 export default async function TeamsPage() {
   const teams = await prisma.team.findMany({
     include: { players: true, deliveries: true },

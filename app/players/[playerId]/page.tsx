@@ -10,6 +10,8 @@ import { prisma } from "@/lib/prisma";
 import { playerStatusLabel, songApprovalStatusLabel } from "@/lib/status";
 import { musicStyleSummary } from "@/lib/musicStyles";
 
+export const dynamic = "force-dynamic";
+
 export default async function PlayerDetailPage({ params }: { params: Promise<{ playerId: string }> }) {
   const { playerId } = await params;
   const player = await prisma.player.findUnique({

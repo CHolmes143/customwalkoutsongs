@@ -4,6 +4,8 @@ import { Field, TeamStatusSelect, TextArea } from "@/components/forms";
 import { updateTeam } from "@/lib/actions";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditTeamPage({ params }: { params: Promise<{ teamId: string }> }) {
   const { teamId } = await params;
   const team = await prisma.team.findUnique({ where: { id: teamId } });
