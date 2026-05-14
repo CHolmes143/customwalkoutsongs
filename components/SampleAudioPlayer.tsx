@@ -47,7 +47,7 @@ export function SamplesGrid() {
             type="button"
           >
             <span>{track.label}</span>
-            <Ear aria-hidden="true" size={42} />
+            <Ear aria-hidden="true" size={28} />
             <small>{track.url ? "Hear sample" : "Coming soon"}</small>
           </button>
         ))}
