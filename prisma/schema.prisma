@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Team {
+  id                String          @id @default(cuid())
+  teamName          String
+  sport             String          @default("Baseball")
+  ageGroup          String
+  season            String?
+  organizationName  String?
+  coachName         String?
+  teamContactName   String?
+  teamContactEmail  String?
+  teamContactPhone  String?
+  orderStatus       String   @default("NEW")
+  notes             String?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  players           Player[]
+  deliveries        Delivery[]
+}
+
+model Player {
+  id                  String       @id @default(cuid())
+  teamId              String
+  playerFirstName     String
+  playerLastName      String
+  jerseyNumber        String?
+  nickname            String?
+  musicStyles         String?
+  parentName          String?
+  parentEmail         String?
+  parentContactNumber String?
+  cleanLyricsRequired Boolean      @default(true)
+  status              String   @default("NEEDS_INTAKE")
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+
+  team                Team          @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  prompts             SongPrompt[]
+  songVersions        SongVersion[]
+
+  @@index([teamId])
+}
+
+model SongPrompt {
+  id                    String   @id @default(cuid())
+  playerId              String
+  promptText            String
+  promptVersion         Int      @default(1)
+  styleTags             String?
+  durationTargetSeconds Int      @default(20)
+  isApprovedForSuno     Boolean  @default(false)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  player                Player        @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  songVersions          SongVersion[]
+
+  @@index([playerId])
+}
+
+model SongVersion {
+  id              String             @id @default(cuid())
+  playerId        String
+  promptId        String?
+  versionName     String
+  sunoSongTitle   String?
+  sunoUrl         String?
+  audioFileUrl    String?
+  durationSeconds Int?
+  lyricsText      String?
+  internalNotes   String?
+  approvalStatus  String   @default("NEEDS_REVIEW")
+  selectedFinal   Boolean            @default(false)
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  player          Player      @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  prompt          SongPrompt? @relation(fields: [promptId], references: [id], onDelete: SetNull)
+
+  @@index([playerId])
+  @@index([promptId])
+}
+
+model Delivery {
+  id             String         @id @default(cuid())
+  teamId         String
+  deliveryStatus String   @default("NOT_STARTED")
+  deliveryUrl    String?
+  finalNotes     String?
+  deliveredAt    DateTime?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  team           Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
+  @@index([teamId])
+}
