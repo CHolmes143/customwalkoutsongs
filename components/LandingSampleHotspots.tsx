@@ -20,15 +20,9 @@ export function LandingSampleHotspots() {
       <button className="landing-hotspot sample-country" onClick={() => playSample("Country", tracks.Country)} type="button">
         Country sample
       </button>
-      <button className="landing-hotspot sample-rock" onClick={() => playSample("Rock", tracks.Rock)} type="button">
-        Rock sample
-      </button>
       <a className="landing-hotspot sample-pop" href="#samples">
         Pop sample
       </a>
-      <button className="landing-hotspot sample-punk" onClick={() => playSample("Punk", tracks.Punk)} type="button">
-        Punk sample
-      </button>
       <button className="landing-hotspot sample-rap" onClick={() => playSample("Rap", tracks.Rap)} type="button">
         Rap sample
       </button>
