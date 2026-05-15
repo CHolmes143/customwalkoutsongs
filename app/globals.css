@@ -80,22 +80,22 @@ a {
 
 .landing-art-main {
   aspect-ratio: 1366 / 1871;
-  background-image: url("/landing-v2/1.png");
+  background-image: url("/landing-v2/1.png?v=3");
 }
 
 .landing-art-individual {
   aspect-ratio: 1366 / 517;
-  background-image: url("/landing-v2/2.png");
+  background-image: url("/landing-v2/2.png?v=3");
 }
 
 .landing-art-team {
   aspect-ratio: 1366 / 768;
-  background-image: url("/landing-v2/3.png");
+  background-image: url("/landing-v2/3.png?v=3");
 }
 
 .landing-art-close {
   aspect-ratio: 1366 / 326;
-  background-image: url("/landing-v2/4.png");
+  background-image: url("/landing-v2/4.png?v=3");
 }
 
 .landing-hotspot {
