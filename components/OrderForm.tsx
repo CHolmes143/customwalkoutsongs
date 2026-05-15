@@ -155,7 +155,7 @@ export function OrderForm() {
         </label>
       </div>
       <button className="order-submit" disabled={status === "submitting"} type="submit">
-        {status === "submitting" ? "Sending..." : "Submit + pay with Venmo"}
+        {status === "submitting" ? "Sending..." : "Submit -> pay with Venmo"}
       </button>
       {message ? <p className={status === "error" ? "order-message error" : "order-message"}>{message}</p> : null}
     </form>
