@@ -87,7 +87,7 @@ export function OrderForm() {
           <input name="teamName" onChange={(event) => updateField("teamName", event.target.value)} value={form.teamName} />
         </label>
         <label className="field">
-          <span>{orderFieldLabels.playerFirstName}</span>
+          <span>{orderFieldLabels.playerFirstName} *</span>
           <input
             name="playerFirstName"
             onChange={(event) => updateField("playerFirstName", event.target.value)}
@@ -96,7 +96,7 @@ export function OrderForm() {
           />
         </label>
         <label className="field">
-          <span>{orderFieldLabels.playerLastName}</span>
+          <span>{orderFieldLabels.playerLastName} *</span>
           <input
             name="playerLastName"
             onChange={(event) => updateField("playerLastName", event.target.value)}
@@ -105,7 +105,7 @@ export function OrderForm() {
           />
         </label>
         <label className="field">
-          <span>{orderFieldLabels.jerseyNumber}</span>
+          <span>{orderFieldLabels.jerseyNumber} *</span>
           <input
             inputMode="numeric"
             name="jerseyNumber"
@@ -115,7 +115,7 @@ export function OrderForm() {
           />
         </label>
         <label className="field">
-          <span>{orderFieldLabels.musicStyle}</span>
+          <span>{orderFieldLabels.musicStyle} *</span>
           <select
             name="musicStyle"
             onChange={(event) => updateField("musicStyle", event.target.value)}
@@ -131,7 +131,7 @@ export function OrderForm() {
           </select>
         </label>
         <fieldset className="field radio-field span-2">
-          <legend>{orderFieldLabels.rushOrder}</legend>
+          <legend>{orderFieldLabels.rushOrder} *</legend>
           <div className="radio-options">
             <label>
               <input
@@ -158,7 +158,7 @@ export function OrderForm() {
           </div>
         </fieldset>
         <label className="field">
-          <span>{orderFieldLabels.parentGuardianName}</span>
+          <span>{orderFieldLabels.parentGuardianName} *</span>
           <input
             name="parentGuardianName"
             onChange={(event) => updateField("parentGuardianName", event.target.value)}
@@ -167,7 +167,7 @@ export function OrderForm() {
           />
         </label>
         <label className="field">
-          <span>{orderFieldLabels.parentGuardianPhoneNumber}</span>
+          <span>{orderFieldLabels.parentGuardianPhoneNumber} *</span>
           <input
             name="parentGuardianPhoneNumber"
             onChange={(event) => updateField("parentGuardianPhoneNumber", event.target.value)}
