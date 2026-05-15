@@ -51,7 +51,7 @@ export function OrderForm() {
     <form className="order-form" onSubmit={submitOrder}>
       <div className="form-grid">
         <label className="field">
-          <span>{orderFieldLabels.playerDivision}</span>
+          <span>{orderFieldLabels.playerDivision} *</span>
           <input
             name="playerDivision"
             onChange={(event) => updateField("playerDivision", event.target.value)}
