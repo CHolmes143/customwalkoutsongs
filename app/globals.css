@@ -307,7 +307,7 @@ a {
 .faq-item p {
   align-self: center;
   font-size: clamp(16px, 1.45vw, 22px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.18;
   margin: 0;
 }
