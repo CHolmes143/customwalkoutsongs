@@ -178,7 +178,19 @@ export function OrderForm() {
         </label>
       </div>
       <button className="order-submit" disabled={status === "submitting"} type="submit">
-        {status === "submitting" ? "Sending..." : "Submit -> pay with Venmo"}
+        {status === "submitting" ? (
+          "Sending..."
+        ) : (
+          <>
+            Submit
+            <span aria-hidden="true" className="button-arrow">
+              <svg fill="none" viewBox="0 0 24 24">
+                <path d="M5 12h13m-5-5 5 5-5 5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" />
+              </svg>
+            </span>
+            pay with Venmo
+          </>
+        )}
       </button>
       {message ? <p className={status === "error" ? "order-message error" : "order-message"}>{message}</p> : null}
       {status === "success" ? (

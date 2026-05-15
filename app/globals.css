@@ -419,6 +419,7 @@ a {
 }
 
 .order-submit {
+  align-items: center;
   background: #ffad1b;
   border: 0;
   border-radius: 999px;
@@ -427,10 +428,28 @@ a {
   display: flex;
   font-size: 22px;
   font-weight: 900;
+  gap: 10px;
   justify-content: center;
   margin-top: 24px;
   padding: 15px 24px;
   width: 100%;
+}
+
+.button-arrow {
+  align-items: center;
+  background: #050505;
+  border-radius: 999px;
+  color: #ffad1b;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 30px;
+  justify-content: center;
+  width: 40px;
+}
+
+.button-arrow svg {
+  height: 20px;
+  width: 24px;
 }
 
 .order-submit:disabled {
