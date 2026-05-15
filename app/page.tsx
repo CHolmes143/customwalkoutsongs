@@ -4,17 +4,17 @@ export default function HomePage() {
   return (
     <main className="landing">
       <section className="landing-art landing-art-main" id="samples" aria-label="Custom walkout songs overview and song samples">
-        <a className="landing-hotspot hero-player" href="#individual-packages">
+        <a className="landing-hotspot landing-cta hero-player" href="#individual-packages">
           Individual Player Packages
         </a>
-        <a className="landing-hotspot hero-team" href="#team-packages">
+        <a className="landing-hotspot landing-cta hero-team" href="#team-packages">
           Team Packages
         </a>
         <LandingSampleHotspots />
-        <a className="landing-hotspot lower-player" href="#individual-packages">
-          Individual Packages
+        <a className="landing-hotspot landing-cta lower-player" href="#individual-packages">
+          Individual Player Packages
         </a>
-        <a className="landing-hotspot lower-team" href="#team-packages">
+        <a className="landing-hotspot landing-cta lower-team" href="#team-packages">
           Team Packages
         </a>
       </section>
@@ -24,14 +24,14 @@ export default function HomePage() {
         id="individual-packages"
         aria-label="Individual player packages"
       >
-        <a className="landing-hotspot individual-basic" href="#order-individual-basic">
-          Order individual basic package
+        <a className="landing-hotspot landing-cta individual-basic" href="#order-individual-basic">
+          Order Now
         </a>
       </section>
 
       <section className="landing-art landing-art-team" id="team-packages" aria-label="Team packages">
-        <a className="landing-hotspot team-order" href="#order-team-package">
-          Order team package
+        <a className="landing-hotspot landing-cta team-order" href="#order-team-package">
+          Order Now
         </a>
       </section>
 
