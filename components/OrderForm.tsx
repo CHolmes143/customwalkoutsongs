@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { musicStyleOptions, orderFieldLabels, type OrderFormPayload } from "@/lib/orderForm";
+import { musicStyleOptions, orderFieldLabels, playerDivisionOptions, type OrderFormPayload } from "@/lib/orderForm";
 
 const teamSongHelpText =
   "Why is this information needed? This is one of the ways we ensure no teammates have a similar-sounding song.";
@@ -60,12 +60,19 @@ export function OrderForm() {
               ?
             </span>
           </span>
-          <input
+          <select
             name="playerDivision"
             onChange={(event) => updateField("playerDivision", event.target.value)}
             required
             value={form.playerDivision}
-          />
+          >
+            <option value="">Choose a division</option>
+            {playerDivisionOptions.map((division) => (
+              <option key={division} value={division}>
+                {division}
+              </option>
+            ))}
+          </select>
         </label>
         <label className="field">
           <span className="field-label">
