@@ -467,6 +467,13 @@ a {
   margin: 0;
 }
 
+.venmo-payment-panel h2 {
+  color: #ffad1b;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1;
+  margin: 0;
+}
+
 .venmo-payment-panel a {
   background: #ffad1b;
   border-radius: 999px;
