@@ -195,6 +195,19 @@ a {
   width: 28.5%;
 }
 
+.individual-song-length {
+  background: rgba(238, 242, 235, 0.94);
+  color: #050505;
+  font-size: clamp(10px, 1.75vw, 24px);
+  left: 4.1%;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0.2% 1.1% 0.25% 0;
+  position: absolute;
+  top: 82.2%;
+  z-index: 1;
+}
+
 .team-order {
   height: 7.2%;
   left: 8.6%;

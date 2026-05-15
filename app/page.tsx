@@ -18,6 +18,7 @@ export default function HomePage() {
         id="individual-packages"
         aria-label="Individual player packages"
       >
+        <p className="individual-song-length">Song length: 10 - 15secs:</p>
         <a className="landing-hotspot individual-basic" href="#contact">
           Order Now
         </a>
