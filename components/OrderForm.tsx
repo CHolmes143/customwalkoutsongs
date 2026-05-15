@@ -13,7 +13,6 @@ const initialForm: OrderFormPayload = {
   rushOrder: "No",
   parentGuardianName: "",
   parentGuardianPhoneNumber: "",
-  parentGuardianEmail: "",
 };
 
 export function OrderForm() {
@@ -152,16 +151,6 @@ export function OrderForm() {
             required
             type="tel"
             value={form.parentGuardianPhoneNumber}
-          />
-        </label>
-        <label className="field span-2">
-          <span>{orderFieldLabels.parentGuardianEmail}</span>
-          <input
-            name="parentGuardianEmail"
-            onChange={(event) => updateField("parentGuardianEmail", event.target.value)}
-            required
-            type="email"
-            value={form.parentGuardianEmail}
           />
         </label>
       </div>

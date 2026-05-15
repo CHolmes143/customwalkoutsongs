@@ -10,7 +10,6 @@ const requiredFields: Array<keyof OrderFormPayload> = [
   "rushOrder",
   "parentGuardianName",
   "parentGuardianPhoneNumber",
-  "parentGuardianEmail",
 ];
 
 export async function POST(request: Request) {

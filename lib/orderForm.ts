@@ -16,7 +16,6 @@ export const orderFieldLabels = {
   rushOrder: "Is this a rush order (+$25)?",
   parentGuardianName: "Parent/Guardian Name",
   parentGuardianPhoneNumber: "Parent/Guardian Phone Number",
-  parentGuardianEmail: "Parent/Guardian Email",
 } as const;
 
 export type OrderFormPayload = Record<keyof typeof orderFieldLabels, string>;
@@ -32,6 +31,5 @@ export function normalizeOrderPayload(input: Partial<OrderFormPayload>): OrderFo
     rushOrder: input.rushOrder?.trim() ?? "No",
     parentGuardianName: input.parentGuardianName?.trim() ?? "",
     parentGuardianPhoneNumber: input.parentGuardianPhoneNumber?.trim() ?? "",
-    parentGuardianEmail: input.parentGuardianEmail?.trim() ?? "",
   };
 }

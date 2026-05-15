@@ -12,7 +12,6 @@ const ORDER_COLUMNS = [
   "Is this a rush order (+$25)?",
   "Parent/Guardian Name",
   "Parent/Guardian Phone Number",
-  "Parent/Guardian Email",
 ];
 
 const FIELD_MAP = {
@@ -25,7 +24,6 @@ const FIELD_MAP = {
   "Is this a rush order (+$25)?": "rushOrder",
   "Parent/Guardian Name": "parentGuardianName",
   "Parent/Guardian Phone Number": "parentGuardianPhoneNumber",
-  "Parent/Guardian Email": "parentGuardianEmail",
 };
 
 function doPost(e) {
