@@ -144,15 +144,20 @@ a {
 .landing-music-style-line {
   background: #079919;
   color: white;
+  display: flex;
+  align-items: center;
   font-size: clamp(12px, 2.15vw, 30px);
   font-style: italic;
   font-weight: 900;
+  height: 3.7%;
   left: 4.2%;
   line-height: 1.1;
   padding: 0 1.4% 0.25% 0;
   position: absolute;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.18);
-  top: 52.7%;
+  top: 52.2%;
+  width: 35%;
+  z-index: 1;
 }
 
 .sample-country-rock,
