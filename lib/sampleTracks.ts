@@ -4,7 +4,7 @@ export const sampleTracks = [
   { label: "BPM/Dance", url: "" },
   { label: "Pop Punk", url: "" },
   { label: "Trap / Hip Hop", url: "" },
-  { label: "Rap Rock/Metal", url: "" },
+  { label: "Rap Rock/Metal", url: "/samples/rap-rock-metal-sample.mp3" },
 ];
 
 export const defaultSampleTrack = sampleTracks.find((track) => track.url) ?? sampleTracks[0];
