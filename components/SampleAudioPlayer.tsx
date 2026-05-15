@@ -64,7 +64,6 @@ export function OrderSamplesGrid() {
     <section className="order-samples" aria-label="Listen to song samples">
       <div>
         <p className="eyebrow">Song Samples</p>
-        <h2>Listen Before You Choose</h2>
       </div>
       <div className="order-samples-grid">
         {sampleTracks.map((track) => (
