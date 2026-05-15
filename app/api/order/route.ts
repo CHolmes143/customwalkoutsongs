@@ -22,6 +22,13 @@ export async function POST(request: Request) {
 
   const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
   if (!webhookUrl) {
+    if (process.env.NODE_ENV !== "production") {
+      return NextResponse.json({
+        message: "Order received for local testing. Continue to Venmo.",
+        sheetConnected: false,
+      });
+    }
+
     return NextResponse.json(
       { message: "The order form is ready, but Google Sheets is not connected yet." },
       { status: 503 },
