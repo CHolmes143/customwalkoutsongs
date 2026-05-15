@@ -196,38 +196,19 @@ a {
 }
 
 .landing-sample-circle {
-  align-items: center;
-  background: #050505;
+  background: transparent;
   border: 0;
-  border-radius: 999px;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  justify-content: center;
-  padding: 1.4%;
-  text-align: center;
-  text-indent: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  color: transparent;
+  padding: 0;
+  text-indent: -9999px;
 }
 
-.landing-sample-circle span {
-  font-size: clamp(11px, 2vw, 30px);
-  font-weight: 500;
-  line-height: 1;
-}
-
+.landing-sample-circle span,
+.landing-sample-circle small,
 .landing-sample-circle svg {
-  height: clamp(18px, 3.1vw, 44px);
-  width: clamp(18px, 3.1vw, 44px);
-}
-
-.landing-sample-circle small {
-  color: #ffb01f;
-  font-size: clamp(8px, 1vw, 15px);
-  font-weight: 900;
-  line-height: 1;
-  text-transform: uppercase;
+  display: none;
 }
 
 .landing-sample-circle:disabled {
