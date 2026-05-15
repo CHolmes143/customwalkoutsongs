@@ -27,9 +27,6 @@ export default function HomePage() {
         <a className="landing-hotspot individual-basic" href="#order-individual-basic">
           Order individual basic package
         </a>
-        <a className="landing-hotspot individual-plus" href="#order-individual-plus">
-          Order individual plus package
-        </a>
       </section>
 
       <section className="landing-art landing-art-team" id="team-packages" aria-label="Team packages">
@@ -44,10 +41,6 @@ export default function HomePage() {
         <div id="order-individual-basic">
           <h2>Individual Player Packages</h2>
           <p>Connect this button to the individual player order form or checkout.</p>
-        </div>
-        <div id="order-individual-plus">
-          <h2>Individual Player Package with Extras</h2>
-          <p>Connect this button to the upgraded individual order form or checkout.</p>
         </div>
         <div id="order-team-package">
           <h2>Team Packages</h2>

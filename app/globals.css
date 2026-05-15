@@ -79,12 +79,12 @@ a {
 }
 
 .landing-art-main {
-  aspect-ratio: 1366 / 2063;
+  aspect-ratio: 1366 / 1871;
   background-image: url("/landing-v2/1.png");
 }
 
 .landing-art-individual {
-  aspect-ratio: 1366 / 768;
+  aspect-ratio: 1366 / 517;
   background-image: url("/landing-v2/2.png");
 }
 
@@ -94,7 +94,7 @@ a {
 }
 
 .landing-art-close {
-  aspect-ratio: 1366 / 357;
+  aspect-ratio: 1366 / 326;
   background-image: url("/landing-v2/4.png");
 }
 
@@ -150,69 +150,47 @@ a {
 
 .sample-bpm,
 .sample-country,
-.sample-rock,
 .sample-pop,
-.sample-punk,
 .sample-rap {
-  height: 10.5%;
-  width: 15.5%;
+  height: 10.2%;
+  top: 74.5%;
+  width: 13.5%;
 }
 
 .sample-bpm {
-  left: 41%;
-  top: 67.1%;
+  left: 39.4%;
 }
 
 .sample-country {
-  left: 59.8%;
-  top: 67.1%;
-}
-
-.sample-rock {
-  left: 78%;
-  top: 67.1%;
+  left: 54%;
 }
 
 .sample-pop {
-  left: 41%;
-  top: 81.3%;
-}
-
-.sample-punk {
-  left: 59.8%;
-  top: 81.3%;
+  left: 84%;
 }
 
 .sample-rap {
-  left: 78%;
-  top: 81.3%;
+  left: 69.1%;
 }
 
 .lower-player {
-  height: 4%;
-  left: 8.4%;
-  top: 82.7%;
-  width: 25%;
+  height: 3.8%;
+  left: 7.2%;
+  top: 91%;
+  width: 36.7%;
 }
 
 .lower-team {
-  height: 4%;
-  left: 8.4%;
-  top: 89%;
-  width: 25%;
+  height: 3.8%;
+  left: 55.8%;
+  top: 91%;
+  width: 35%;
 }
 
 .individual-basic {
-  height: 7%;
+  height: 10.5%;
   left: 5%;
-  top: 50%;
-  width: 28.5%;
-}
-
-.individual-plus {
-  height: 7%;
-  left: 62.4%;
-  top: 50%;
+  top: 64.4%;
   width: 28.5%;
 }
 
@@ -258,7 +236,7 @@ a {
   color: white;
   display: grid;
   gap: 28px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0 auto;
   max-width: 1366px;
   padding: 60px min(8vw, 100px);

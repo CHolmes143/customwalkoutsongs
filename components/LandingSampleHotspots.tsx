@@ -1,6 +1,5 @@
 "use client";
 
-import { CirclePlay } from "lucide-react";
 import { useSampleAudioPlayer } from "@/components/SampleAudioPlayer";
 import { sampleTracks } from "@/lib/sampleTracks";
 
@@ -10,10 +9,6 @@ export function LandingSampleHotspots() {
 
   return (
     <>
-      <button className="landing-hear-sample" onClick={() => playSample("Rap", tracks.Rap)} type="button">
-        <CirclePlay aria-hidden="true" size={34} />
-        <span>Hear a sample</span>
-      </button>
       <button className="landing-hotspot sample-bpm" onClick={() => playSample("BPM/Dance", tracks["BPM/Dance"])} type="button">
         BPM/Dance sample
       </button>
