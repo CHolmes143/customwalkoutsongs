@@ -80,22 +80,22 @@ a {
 
 .landing-art-main {
   aspect-ratio: 1366 / 1871;
-  background-image: url("/landing-v2/1.png?v=6");
+  background-image: url("/landing-v2/1.png?v=7");
 }
 
 .landing-art-individual {
   aspect-ratio: 1366 / 517;
-  background-image: url("/landing-v2/2.png?v=6");
+  background-image: url("/landing-v2/2.png?v=7");
 }
 
 .landing-art-team {
   aspect-ratio: 1366 / 768;
-  background-image: url("/landing-v2/3.png?v=6");
+  background-image: url("/landing-v2/3.png?v=7");
 }
 
 .landing-art-close {
   aspect-ratio: 1366 / 326;
-  background-image: url("/landing-v2/4.png?v=6");
+  background-image: url("/landing-v2/4.png?v=7");
 }
 
 .landing-hotspot {
@@ -143,41 +143,35 @@ a {
 
 .sample-country-rock,
 .sample-alt-rock,
-.sample-bpm,
 .sample-pop-punk,
 .sample-trap-hip-hop,
-.sample-rap-rock-metal {
+.sample-hard-rock-metal {
   height: 11.6%;
   width: 15.8%;
 }
 
 .sample-country-rock {
-  left: 45.8%;
-  top: 68.5%;
+  left: 56.4%;
+  top: 69%;
 }
 
 .sample-alt-rock {
-  left: 63.6%;
-  top: 68.5%;
-}
-
-.sample-bpm {
-  left: 81.4%;
-  top: 68.5%;
+  left: 74.1%;
+  top: 69%;
 }
 
 .sample-pop-punk {
-  left: 45.8%;
+  left: 50.5%;
   top: 82.2%;
 }
 
 .sample-trap-hip-hop {
-  left: 63.6%;
+  left: 67.6%;
   top: 82.2%;
 }
 
-.sample-rap-rock-metal {
-  left: 81.4%;
+.sample-hard-rock-metal {
+  left: 84.7%;
   top: 82.2%;
 }
 
@@ -193,19 +187,6 @@ a {
   left: 5%;
   top: 64.4%;
   width: 28.5%;
-}
-
-.individual-song-length {
-  background: rgba(238, 242, 235, 0.94);
-  color: #050505;
-  font-size: clamp(10px, 1.75vw, 24px);
-  left: 4.1%;
-  line-height: 1.1;
-  margin: 0;
-  padding: 0.2% 1.1% 0.25% 0;
-  position: absolute;
-  top: 82.2%;
-  z-index: 1;
 }
 
 .team-order {

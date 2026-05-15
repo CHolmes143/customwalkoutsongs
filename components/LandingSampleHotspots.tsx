@@ -12,11 +12,8 @@ export function LandingSampleHotspots() {
       <button className="landing-hotspot sample-country-rock" onClick={() => playSample("Country Rock", tracks["Country Rock"])} type="button">
         Country Rock sample
       </button>
-      <button className="landing-hotspot sample-alt-rock" onClick={() => playSample("90's/2000's Alt Rock", tracks["90's/2000's Alt Rock"])} type="button">
-        90s/2000s Alt Rock sample
-      </button>
-      <button className="landing-hotspot sample-bpm" onClick={() => playSample("BPM/Dance", tracks["BPM/Dance"])} type="button">
-        BPM/Dance sample
+      <button className="landing-hotspot sample-alt-rock" onClick={() => playSample("Alt Rock", tracks["Alt Rock"])} type="button">
+        Alt Rock sample
       </button>
       <button className="landing-hotspot sample-pop-punk" onClick={() => playSample("Pop Punk", tracks["Pop Punk"])} type="button">
         Pop Punk sample
@@ -24,8 +21,8 @@ export function LandingSampleHotspots() {
       <button className="landing-hotspot sample-trap-hip-hop" onClick={() => playSample("Trap / Hip Hop", tracks["Trap / Hip Hop"])} type="button">
         Trap / Hip Hop sample
       </button>
-      <button className="landing-hotspot sample-rap-rock-metal" onClick={() => playSample("Rap Rock/Metal", tracks["Rap Rock/Metal"])} type="button">
-        Rap Rock/Metal sample
+      <button className="landing-hotspot sample-hard-rock-metal" onClick={() => playSample("Hard Rock/Metal", tracks["Hard Rock/Metal"])} type="button">
+        Hard Rock/Metal sample
       </button>
       {player}
     </>

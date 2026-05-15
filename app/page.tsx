@@ -5,7 +5,7 @@ export default function HomePage() {
     <main className="landing">
       <section className="landing-art landing-art-main" id="samples" aria-label="Custom walkout songs overview and song samples">
         <a className="landing-hotspot hero-player" href="#individual-packages">
-          Create Walkout Song
+          Get Your Song
         </a>
         <LandingSampleHotspots />
         <a className="landing-hotspot lower-player" href="#individual-packages">
@@ -18,7 +18,6 @@ export default function HomePage() {
         id="individual-packages"
         aria-label="Individual player packages"
       >
-        <p className="individual-song-length">Song length: 10 - 15secs:</p>
         <a className="landing-hotspot individual-basic" href="#contact">
           Order Now
         </a>
