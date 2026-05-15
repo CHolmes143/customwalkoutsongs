@@ -706,6 +706,57 @@ h3 {
   font-weight: 800;
 }
 
+.field-label {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+}
+
+.help-tooltip {
+  align-items: center;
+  background: #ffad1b;
+  border-radius: 999px;
+  color: #050505;
+  cursor: help;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 900;
+  height: 18px;
+  justify-content: center;
+  line-height: 1;
+  position: relative;
+  width: 18px;
+}
+
+.help-tooltip::after {
+  background: #050505;
+  border-radius: 8px;
+  bottom: calc(100% + 8px);
+  color: #ffffff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  font-weight: 800;
+  left: 50%;
+  line-height: 1.25;
+  opacity: 0;
+  padding: 10px 12px;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+  transform: translateX(-50%) translateY(4px);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+  visibility: hidden;
+  width: min(280px, 78vw);
+  z-index: 30;
+}
+
+.help-tooltip:hover::after,
+.help-tooltip:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  visibility: visible;
+}
+
 input,
 select,
 textarea {

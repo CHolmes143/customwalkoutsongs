@@ -3,6 +3,9 @@
 import { FormEvent, useState } from "react";
 import { musicStyleOptions, orderFieldLabels, type OrderFormPayload } from "@/lib/orderForm";
 
+const teamSongHelpText =
+  "Why is this information needed? This is one of the ways we ensure no teammates have a similar-sounding song.";
+
 const initialForm: OrderFormPayload = {
   playerDivision: "",
   teamName: "",
@@ -51,7 +54,12 @@ export function OrderForm() {
     <form className="order-form" onSubmit={submitOrder}>
       <div className="form-grid">
         <label className="field">
-          <span>{orderFieldLabels.playerDivision} *</span>
+          <span className="field-label">
+            {orderFieldLabels.playerDivision} *
+            <span aria-label={teamSongHelpText} className="help-tooltip" data-tooltip={teamSongHelpText} tabIndex={0}>
+              ?
+            </span>
+          </span>
           <input
             name="playerDivision"
             onChange={(event) => updateField("playerDivision", event.target.value)}
@@ -60,7 +68,12 @@ export function OrderForm() {
           />
         </label>
         <label className="field">
-          <span>{orderFieldLabels.teamName}</span>
+          <span className="field-label">
+            {orderFieldLabels.teamName}
+            <span aria-label={teamSongHelpText} className="help-tooltip" data-tooltip={teamSongHelpText} tabIndex={0}>
+              ?
+            </span>
+          </span>
           <input name="teamName" onChange={(event) => updateField("teamName", event.target.value)} value={form.teamName} />
         </label>
         <label className="field">
