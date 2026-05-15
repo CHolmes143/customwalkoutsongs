@@ -263,6 +263,83 @@ a {
   white-space: nowrap;
 }
 
+.order-page {
+  background:
+    linear-gradient(rgba(5, 22, 8, 0.82), rgba(5, 22, 8, 0.92)),
+    url("/landing-v2/1.png?v=7");
+  background-position: center 42%;
+  background-size: cover;
+  color: white;
+  min-height: calc(100vh - 60px);
+  padding: 48px min(7vw, 88px) 80px;
+}
+
+.order-hero {
+  margin: 0 auto 28px;
+  max-width: 780px;
+  text-align: center;
+}
+
+.order-hero .eyebrow {
+  color: #ffb01f;
+}
+
+.order-hero h1 {
+  font-size: clamp(44px, 7vw, 92px);
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.order-hero p:last-child {
+  font-size: clamp(17px, 2vw, 25px);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 16px auto 0;
+  max-width: 660px;
+}
+
+.order-form {
+  background: rgba(255, 255, 255, 0.94);
+  border: 3px solid rgba(255, 176, 31, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.32);
+  color: #050505;
+  margin: 0 auto;
+  max-width: 860px;
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.order-submit {
+  background: #ffad1b;
+  border: 0;
+  border-radius: 999px;
+  color: #050505;
+  cursor: pointer;
+  display: flex;
+  font-size: 22px;
+  font-weight: 900;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 15px 24px;
+  width: 100%;
+}
+
+.order-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.order-message {
+  color: #0f4e44;
+  font-weight: 900;
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.order-message.error {
+  color: #a23434;
+}
+
 .landing-order-panel {
   background: #071007;
   color: white;

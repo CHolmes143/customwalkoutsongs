@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export function AppHeader() {
   const pathname = usePathname();
-  const isPublicPage = pathname === "/" || pathname === "/samples";
+  const isPublicPage = pathname === "/" || pathname === "/samples" || pathname === "/order";
   const isPublicHome = pathname === "/";
 
   return (
@@ -16,7 +16,7 @@ export function AppHeader() {
       {isPublicHome ? (
         <nav className="nav">
           <a href="#samples">Samples</a>
-          <a href="#order">Order</a>
+          <Link href="/order">Order</Link>
         </nav>
       ) : isPublicPage ? (
         <nav className="nav">

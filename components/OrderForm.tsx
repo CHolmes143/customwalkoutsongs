@@ -1,0 +1,146 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+import { musicStyleOptions, orderFieldLabels, type OrderFormPayload } from "@/lib/orderForm";
+
+const initialForm: OrderFormPayload = {
+  playerDivision: "",
+  teamName: "",
+  playerFirstName: "",
+  playerLastName: "",
+  jerseyNumber: "",
+  musicStyle: "",
+  parentGuardianName: "",
+  parentGuardianPhoneNumber: "",
+  parentGuardianEmail: "",
+};
+
+export function OrderForm() {
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  function updateField(name: keyof OrderFormPayload, value: string) {
+    setForm((current) => ({ ...current, [name]: value }));
+  }
+
+  async function submitOrder(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("submitting");
+    setMessage("");
+
+    const response = await fetch("/api/order", {
+      body: JSON.stringify(form),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    });
+
+    const result = (await response.json()) as { message?: string };
+    if (!response.ok) {
+      setStatus("error");
+      setMessage(result.message ?? "Something went wrong. Please try again.");
+      return;
+    }
+
+    setStatus("success");
+    setMessage(result.message ?? "Order received.");
+    setForm(initialForm);
+  }
+
+  return (
+    <form className="order-form" onSubmit={submitOrder}>
+      <div className="form-grid">
+        <label className="field">
+          <span>{orderFieldLabels.playerDivision}</span>
+          <input
+            name="playerDivision"
+            onChange={(event) => updateField("playerDivision", event.target.value)}
+            required
+            value={form.playerDivision}
+          />
+        </label>
+        <label className="field">
+          <span>{orderFieldLabels.teamName}</span>
+          <input name="teamName" onChange={(event) => updateField("teamName", event.target.value)} value={form.teamName} />
+        </label>
+        <label className="field">
+          <span>{orderFieldLabels.playerFirstName}</span>
+          <input
+            name="playerFirstName"
+            onChange={(event) => updateField("playerFirstName", event.target.value)}
+            required
+            value={form.playerFirstName}
+          />
+        </label>
+        <label className="field">
+          <span>{orderFieldLabels.playerLastName}</span>
+          <input
+            name="playerLastName"
+            onChange={(event) => updateField("playerLastName", event.target.value)}
+            required
+            value={form.playerLastName}
+          />
+        </label>
+        <label className="field">
+          <span>{orderFieldLabels.jerseyNumber}</span>
+          <input
+            inputMode="numeric"
+            name="jerseyNumber"
+            onChange={(event) => updateField("jerseyNumber", event.target.value)}
+            required
+            value={form.jerseyNumber}
+          />
+        </label>
+        <label className="field">
+          <span>{orderFieldLabels.musicStyle}</span>
+          <select
+            name="musicStyle"
+            onChange={(event) => updateField("musicStyle", event.target.value)}
+            required
+            value={form.musicStyle}
+          >
+            <option value="">Choose a style</option>
+            {musicStyleOptions.map((style) => (
+              <option key={style} value={style}>
+                {style}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="field">
+          <span>{orderFieldLabels.parentGuardianName}</span>
+          <input
+            name="parentGuardianName"
+            onChange={(event) => updateField("parentGuardianName", event.target.value)}
+            required
+            value={form.parentGuardianName}
+          />
+        </label>
+        <label className="field">
+          <span>{orderFieldLabels.parentGuardianPhoneNumber}</span>
+          <input
+            name="parentGuardianPhoneNumber"
+            onChange={(event) => updateField("parentGuardianPhoneNumber", event.target.value)}
+            required
+            type="tel"
+            value={form.parentGuardianPhoneNumber}
+          />
+        </label>
+        <label className="field span-2">
+          <span>{orderFieldLabels.parentGuardianEmail}</span>
+          <input
+            name="parentGuardianEmail"
+            onChange={(event) => updateField("parentGuardianEmail", event.target.value)}
+            required
+            type="email"
+            value={form.parentGuardianEmail}
+          />
+        </label>
+      </div>
+      <button className="order-submit" disabled={status === "submitting"} type="submit">
+        {status === "submitting" ? "Sending..." : "Submit Order"}
+      </button>
+      {message ? <p className={status === "error" ? "order-message error" : "order-message"}>{message}</p> : null}
+    </form>
+  );
+}
