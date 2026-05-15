@@ -31,8 +31,8 @@ export default function HomePage() {
       </section>
 
       <section className="landing-art landing-art-close" aria-label="Making an All-Star Team is a big deal">
-        <a className="landing-hotspot close-learn" href="#individual-packages">
-          Learn More
+        <a className="landing-hotspot close-learn" href="/order">
+          Order Your Song
         </a>
       </section>
 
