@@ -165,33 +165,74 @@ a {
 .sample-pop-punk,
 .sample-trap-hip-hop,
 .sample-hard-rock-metal {
-  height: 11.6%;
-  width: 15.8%;
+  aspect-ratio: 1;
+  height: auto;
+  width: 15.4%;
 }
 
 .sample-country-rock {
-  left: 56.4%;
+  left: 57%;
   top: 69%;
 }
 
 .sample-alt-rock {
-  left: 74.1%;
+  left: 74.2%;
   top: 69%;
 }
 
 .sample-pop-punk {
-  left: 50.5%;
+  left: 50%;
   top: 82.2%;
 }
 
 .sample-trap-hip-hop {
-  left: 67.6%;
+  left: 67.2%;
   top: 82.2%;
 }
 
 .sample-hard-rock-metal {
-  left: 84.7%;
+  left: 84.4%;
   top: 82.2%;
+}
+
+.landing-sample-circle {
+  align-items: center;
+  background: #050505;
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  padding: 1.4%;
+  text-align: center;
+  text-indent: 0;
+}
+
+.landing-sample-circle span {
+  font-size: clamp(11px, 2vw, 30px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.landing-sample-circle svg {
+  height: clamp(18px, 3.1vw, 44px);
+  width: clamp(18px, 3.1vw, 44px);
+}
+
+.landing-sample-circle small {
+  color: #ffb01f;
+  font-size: clamp(8px, 1vw, 15px);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.landing-sample-circle:disabled {
+  cursor: not-allowed;
+  opacity: 0.92;
 }
 
 .lower-player {

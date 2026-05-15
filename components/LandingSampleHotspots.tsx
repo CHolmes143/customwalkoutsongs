@@ -1,5 +1,6 @@
 "use client";
 
+import { Ear } from "lucide-react";
 import { useSampleAudioPlayer } from "@/components/SampleAudioPlayer";
 import { sampleTracks } from "@/lib/sampleTracks";
 
@@ -9,22 +10,24 @@ export function LandingSampleHotspots() {
 
   return (
     <>
-      <button className="landing-hotspot sample-country-rock" onClick={() => playSample("Country Rock", tracks["Country Rock"])} type="button">
-        Country Rock sample
-      </button>
-      <button className="landing-hotspot sample-alt-rock" onClick={() => playSample("Alt Rock", tracks["Alt Rock"])} type="button">
-        Alt Rock sample
-      </button>
-      <button className="landing-hotspot sample-pop-punk" onClick={() => playSample("Pop Punk", tracks["Pop Punk"])} type="button">
-        Pop Punk sample
-      </button>
-      <button className="landing-hotspot sample-trap-hip-hop" onClick={() => playSample("Trap / Hip Hop", tracks["Trap / Hip Hop"])} type="button">
-        Trap / Hip Hop sample
-      </button>
-      <button className="landing-hotspot sample-hard-rock-metal" onClick={() => playSample("Hard Rock/Metal", tracks["Hard Rock/Metal"])} type="button">
-        Hard Rock/Metal sample
-      </button>
+      {sampleTracks.map((track) => (
+        <button
+          className={`landing-hotspot landing-sample-circle ${sampleClassName(track.label)}`}
+          disabled={!track.url}
+          key={track.label}
+          onClick={() => playSample(track.label, tracks[track.label])}
+          type="button"
+        >
+          <span>{track.label}</span>
+          <Ear aria-hidden="true" size={28} />
+          <small>{track.url ? "Listen" : "Coming soon"}</small>
+        </button>
+      ))}
       {player}
     </>
   );
+}
+
+function sampleClassName(label: string) {
+  return `sample-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
 }
