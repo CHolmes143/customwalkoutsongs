@@ -141,6 +141,20 @@ a {
   width: 41.4%;
 }
 
+.landing-music-style-line {
+  background: #079919;
+  color: white;
+  font-size: clamp(12px, 2.15vw, 30px);
+  font-style: italic;
+  font-weight: 900;
+  left: 4.2%;
+  line-height: 1.1;
+  padding: 0 1.4% 0.25% 0;
+  position: absolute;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.18);
+  top: 52.7%;
+}
+
 .sample-country-rock,
 .sample-alt-rock,
 .sample-pop-punk,
