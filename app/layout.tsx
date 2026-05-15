@@ -3,7 +3,7 @@ import { AppHeader } from "@/components/AppHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Custom Walkout Songs",
+  title: "Custom Walkout Song",
   description: "Internal dashboard for youth baseball walkout song production.",
 };
 
