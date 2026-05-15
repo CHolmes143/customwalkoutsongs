@@ -224,6 +224,22 @@ a {
   width: 100%;
 }
 
+.landing-footer {
+  background: #071007;
+  color: white;
+  font-size: clamp(18px, 3vw, 34px);
+  font-weight: 900;
+  margin: 0 auto;
+  max-width: 1366px;
+  padding: 38px min(8vw, 100px);
+  text-align: center;
+}
+
+.landing-footer a {
+  color: #ffb01f;
+  white-space: nowrap;
+}
+
 .landing-order-panel {
   background: #071007;
   color: white;

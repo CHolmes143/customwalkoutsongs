@@ -18,13 +18,13 @@ export default function HomePage() {
         id="individual-packages"
         aria-label="Individual player packages"
       >
-        <a className="landing-hotspot individual-basic" href="#order-individual-basic">
+        <a className="landing-hotspot individual-basic" href="#contact">
           Order Now
         </a>
       </section>
 
       <section className="landing-art landing-art-team" id="team-packages" aria-label="Team packages">
-        <a className="landing-hotspot team-order" href="#order-team-package">
+        <a className="landing-hotspot team-order" href="#contact">
           Order Now
         </a>
       </section>
@@ -35,16 +35,9 @@ export default function HomePage() {
         </a>
       </section>
 
-      <section className="landing-order-panel" id="order">
-        <div id="order-individual-basic">
-          <h2>Individual Player Packages</h2>
-          <p>Connect this button to the individual player order form or checkout.</p>
-        </div>
-        <div id="order-team-package">
-          <h2>Team Packages</h2>
-          <p>Connect this button to the team package order form or checkout.</p>
-        </div>
-      </section>
+      <footer className="landing-footer" id="contact">
+        Questions? Contact: <a href="mailto:CustomWalkoutSong@gmail.com">CustomWalkoutSong@gmail.com</a>
+      </footer>
     </main>
   );
 }
