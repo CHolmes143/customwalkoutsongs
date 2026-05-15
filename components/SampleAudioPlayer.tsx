@@ -34,21 +34,21 @@ export function useSampleAudioPlayer() {
 
 export function SamplesGrid() {
   const { playSample, player } = useSampleAudioPlayer();
+  const playableTracks = sampleTracks.filter((track) => track.url);
 
   return (
     <>
       <div className="samples-grid">
-        {sampleTracks.map((track) => (
+        {playableTracks.map((track) => (
           <button
-            className={track.url ? "sample-card" : "sample-card disabled"}
-            disabled={!track.url}
+            className="sample-card"
             key={track.label}
             onClick={() => playSample(track.label, track.url)}
             type="button"
           >
             <span>{track.label}</span>
             <Ear aria-hidden="true" size={28} />
-            <small>{track.url ? "Hear sample" : "Coming soon"}</small>
+            <small>Listen</small>
           </button>
         ))}
       </div>
