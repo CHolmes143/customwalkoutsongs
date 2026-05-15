@@ -14,8 +14,8 @@ export default function OrderPage() {
         <h1>Order Your Song</h1>
         <p>Fill out the player details below and we&apos;ll get your custom walkout song started.</p>
       </section>
-      <OrderSamplesGrid />
       <OrderForm />
+      <OrderSamplesGrid />
     </main>
   );
 }
