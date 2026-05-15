@@ -309,6 +309,64 @@ a {
   padding: clamp(22px, 4vw, 42px);
 }
 
+.order-samples {
+  background: rgba(5, 5, 5, 0.82);
+  border: 2px solid rgba(255, 176, 31, 0.72);
+  border-radius: 18px;
+  margin: 0 auto 24px;
+  max-width: 860px;
+  padding: clamp(20px, 3vw, 34px);
+  text-align: center;
+}
+
+.order-samples .eyebrow {
+  color: #ffb01f;
+}
+
+.order-samples h2 {
+  font-size: clamp(26px, 4vw, 46px);
+  margin-top: 4px;
+}
+
+.order-samples-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.order-sample-button {
+  align-items: center;
+  background: #050505;
+  border: 2px solid rgba(255, 255, 255, 0.86);
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 122px;
+  padding: 14px 8px;
+}
+
+.order-sample-button span {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.order-sample-button small {
+  color: #ffb01f;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.order-sample-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.54;
+}
+
 .order-submit {
   background: #ffad1b;
   border: 0;
@@ -690,6 +748,10 @@ textarea {
 
   .landing-order-panel {
     grid-template-columns: 1fr;
+  }
+
+  .order-samples-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .samples-grid {

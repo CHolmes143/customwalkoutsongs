@@ -56,3 +56,32 @@ export function SamplesGrid() {
     </>
   );
 }
+
+export function OrderSamplesGrid() {
+  const { playSample, player } = useSampleAudioPlayer();
+
+  return (
+    <section className="order-samples" aria-label="Listen to song samples">
+      <div>
+        <p className="eyebrow">Song Samples</p>
+        <h2>Listen Before You Choose</h2>
+      </div>
+      <div className="order-samples-grid">
+        {sampleTracks.map((track) => (
+          <button
+            className={track.url ? "order-sample-button" : "order-sample-button disabled"}
+            disabled={!track.url}
+            key={track.label}
+            onClick={() => playSample(track.label, track.url)}
+            type="button"
+          >
+            <Ear aria-hidden="true" size={24} />
+            <span>{track.label}</span>
+            <small>{track.url ? "Listen" : "Sample coming soon"}</small>
+          </button>
+        ))}
+      </div>
+      {player}
+    </section>
+  );
+}
