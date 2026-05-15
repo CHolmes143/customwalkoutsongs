@@ -714,6 +714,46 @@ textarea {
   width: 100%;
 }
 
+.radio-field {
+  border: 1px solid #cbc5b8;
+  border-radius: 8px;
+  padding: 13px 14px 14px;
+}
+
+.radio-field legend {
+  color: #42464d;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 0 4px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 12px;
+}
+
+.radio-options label {
+  align-items: center;
+  background: #fbfaf6;
+  border: 1px solid #cbc5b8;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  padding: 8px 16px;
+}
+
+.radio-options input {
+  accent-color: #ffad1b;
+  width: auto;
+}
+
+.radio-options span {
+  color: #050505;
+  font-size: 15px;
+  font-weight: 900;
+}
+
 textarea {
   resize: vertical;
 }

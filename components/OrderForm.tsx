@@ -10,6 +10,7 @@ const initialForm: OrderFormPayload = {
   playerLastName: "",
   jerseyNumber: "",
   musicStyle: "",
+  rushOrder: "No",
   parentGuardianName: "",
   parentGuardianPhoneNumber: "",
   parentGuardianEmail: "",
@@ -107,6 +108,33 @@ export function OrderForm() {
             ))}
           </select>
         </label>
+        <fieldset className="field radio-field span-2">
+          <legend>{orderFieldLabels.rushOrder}</legend>
+          <div className="radio-options">
+            <label>
+              <input
+                checked={form.rushOrder === "Yes"}
+                name="rushOrder"
+                onChange={(event) => updateField("rushOrder", event.target.value)}
+                required
+                type="radio"
+                value="Yes"
+              />
+              <span>Yes</span>
+            </label>
+            <label>
+              <input
+                checked={form.rushOrder === "No"}
+                name="rushOrder"
+                onChange={(event) => updateField("rushOrder", event.target.value)}
+                required
+                type="radio"
+                value="No"
+              />
+              <span>No</span>
+            </label>
+          </div>
+        </fieldset>
         <label className="field">
           <span>{orderFieldLabels.parentGuardianName}</span>
           <input

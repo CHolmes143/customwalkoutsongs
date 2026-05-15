@@ -7,6 +7,7 @@ const requiredFields: Array<keyof OrderFormPayload> = [
   "playerLastName",
   "jerseyNumber",
   "musicStyle",
+  "rushOrder",
   "parentGuardianName",
   "parentGuardianPhoneNumber",
   "parentGuardianEmail",
