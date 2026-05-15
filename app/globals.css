@@ -449,6 +449,44 @@ a {
   color: #a23434;
 }
 
+.venmo-payment-panel {
+  background: #050505;
+  border: 2px solid #ffad1b;
+  border-radius: 14px;
+  color: #ffffff;
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 18px;
+  text-align: center;
+}
+
+.venmo-payment-panel p {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.venmo-payment-panel a {
+  background: #ffad1b;
+  border-radius: 999px;
+  color: #050505;
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: 900;
+  justify-content: center;
+  justify-self: center;
+  padding: 13px 22px;
+  text-decoration: none;
+  width: min(100%, 360px);
+}
+
+.venmo-payment-panel small {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
 .landing-order-panel {
   background: #071007;
   color: white;

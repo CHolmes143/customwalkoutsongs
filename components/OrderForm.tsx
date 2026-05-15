@@ -5,6 +5,7 @@ import { musicStyleOptions, orderFieldLabels, playerDivisionOptions, type OrderF
 
 const teamSongHelpText =
   "Why is this information needed? This is one of the ways we ensure no teammates have a similar-sounding song.";
+const venmoUrl = "https://venmo.com/u/customwalkoutsong";
 
 const initialForm: OrderFormPayload = {
   playerDivision: "",
@@ -20,6 +21,7 @@ const initialForm: OrderFormPayload = {
 
 export function OrderForm() {
   const [form, setForm] = useState(initialForm);
+  const [paymentNote, setPaymentNote] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -45,6 +47,7 @@ export function OrderForm() {
       return;
     }
 
+    setPaymentNote(`${form.playerFirstName} ${form.playerLastName} #${form.jerseyNumber}`);
     setStatus("success");
     setMessage(result.message ?? "Order received.");
     setForm(initialForm);
@@ -178,6 +181,15 @@ export function OrderForm() {
         {status === "submitting" ? "Sending..." : "Submit -> pay with Venmo"}
       </button>
       {message ? <p className={status === "error" ? "order-message error" : "order-message"}>{message}</p> : null}
+      {status === "success" ? (
+        <div className="venmo-payment-panel">
+          <p>Next step: pay with Venmo.</p>
+          <a href={venmoUrl} rel="noreferrer" target="_blank">
+            Pay @customwalkoutsong
+          </a>
+          {paymentNote ? <small>Include this note: {paymentNote}</small> : null}
+        </div>
+      ) : null}
     </form>
   );
 }
