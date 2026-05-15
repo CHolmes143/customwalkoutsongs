@@ -68,7 +68,7 @@ export default function HomePage() {
           </article>
           <article className="faq-item">
             <h3>How will my song be delivered?</h3>
-            <p>Your song will be delivered via text and email to information provided on the order form.</p>
+            <p>Your song will be delivered via text to the number provided on the order form.</p>
           </article>
           <article className="faq-item">
             <h3>What if I have a question that isn&apos;t addressed above?</h3>
