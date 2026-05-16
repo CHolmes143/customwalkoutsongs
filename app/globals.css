@@ -80,7 +80,7 @@ a {
 
 .landing-art-main {
   aspect-ratio: 1366 / 1831;
-  background-image: url("/landing-v2/1.png?v=9");
+  background-image: url("/landing-v2/1.png?v=10");
 }
 
 .landing-art-individual {
@@ -401,7 +401,7 @@ a {
 .order-page {
   background:
     linear-gradient(rgba(5, 22, 8, 0.82), rgba(5, 22, 8, 0.92)),
-    url("/landing-v2/1.png?v=9");
+    url("/landing-v2/1.png?v=10");
   background-position: center 42%;
   background-size: cover;
   color: white;
@@ -657,7 +657,7 @@ a {
 .samples-page {
   background:
     linear-gradient(rgba(5, 22, 8, 0.82), rgba(5, 22, 8, 0.92)),
-    url("/landing-v2/1.png?v=9");
+    url("/landing-v2/1.png?v=10");
   background-position: center 58%;
   background-size: cover;
   color: white;
