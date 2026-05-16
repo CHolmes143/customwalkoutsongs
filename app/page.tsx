@@ -8,8 +8,8 @@ export default function HomePage() {
           Get Your Player&apos;s Walkout Song!
         </a>
         <LandingSampleHotspots />
-        <a className="landing-hotspot lower-player" href="/order">
-          Individual Player Package
+        <a className="landing-hotspot landing-cta lower-player" href="/order">
+          Order Your Song!
         </a>
       </section>
 
