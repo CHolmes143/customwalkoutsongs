@@ -178,7 +178,6 @@ a {
   width: 41.4%;
 }
 
-.individual-basic,
 .close-learn {
   align-items: center;
   display: flex;
@@ -276,6 +275,7 @@ a {
 .individual-basic {
   height: 10.5%;
   left: 5%;
+  text-indent: -9999px;
   top: 64.4%;
   width: 28.5%;
 }
