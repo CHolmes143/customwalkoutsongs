@@ -532,48 +532,35 @@ a {
 }
 
 .venmo-payment-panel {
-  background: #050505;
+  align-items: end;
+  aspect-ratio: 1366 / 768;
+  background-image: url("/landing-v2/thank-you-page.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 2px solid #ffad1b;
   border-radius: 14px;
-  color: #ffffff;
-  display: grid;
-  gap: 10px;
+  display: flex;
+  justify-content: center;
   margin-top: 18px;
-  padding: 18px;
+  min-height: 280px;
+  overflow: hidden;
+  padding: 0 18px 28px;
   text-align: center;
 }
 
-.venmo-payment-panel p {
-  font-size: 18px;
-  font-weight: 900;
-  margin: 0;
-}
-
-.venmo-payment-panel h2 {
-  color: #ffad1b;
-  font-size: clamp(28px, 5vw, 44px);
-  line-height: 1;
-  margin: 0;
-}
-
 .venmo-payment-panel a {
-  background: #ffad1b;
+  background: linear-gradient(180deg, #ffc63a 0%, #ffa20a 100%);
   border-radius: 999px;
+  box-shadow: 0 10px 0 #8f5200, 0 18px 28px rgba(0, 0, 0, 0.32);
   color: #050505;
   display: inline-flex;
-  font-size: 20px;
+  font-size: clamp(16px, 2.4vw, 26px);
   font-weight: 900;
   justify-content: center;
-  justify-self: center;
-  padding: 13px 22px;
+  padding: 15px 24px;
   text-decoration: none;
   width: min(100%, 360px);
-}
-
-.venmo-payment-panel small {
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 800;
 }
 
 .landing-order-panel {

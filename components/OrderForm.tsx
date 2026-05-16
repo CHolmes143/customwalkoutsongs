@@ -190,11 +190,12 @@ export function OrderForm() {
           </>
         )}
       </button>
-      {message ? <p className={status === "error" ? "order-message error" : "order-message"}>{message}</p> : null}
+      {status === "error" && message ? <p className="order-message error">{message}</p> : null}
       {status === "success" ? (
-        <div className="venmo-payment-panel">
-          <h2>Thank You!</h2>
-          <p>We&apos;ll get to work as soon as your payment has been received!</p>
+        <div
+          aria-label="Thank you for supporting our small business. Your song will be delivered in MP3 format via text within 48 hours of your payment being received. Please complete your order now so we can get to work."
+          className="venmo-payment-panel"
+        >
           <a href={venmoUrl} rel="noreferrer" target="_blank">
             Get Your Players Song
           </a>
