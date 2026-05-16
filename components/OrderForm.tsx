@@ -19,7 +19,11 @@ const initialForm: OrderFormPayload = {
   parentGuardianPhoneNumber: "",
 };
 
-export function OrderForm() {
+type OrderFormProps = {
+  onSuccess?: () => void;
+};
+
+export function OrderForm({ onSuccess }: OrderFormProps) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -49,6 +53,11 @@ export function OrderForm() {
     setStatus("success");
     setMessage(result.message ?? "Order received.");
     setForm(initialForm);
+    onSuccess?.();
+  }
+
+  if (status === "success") {
+    return <OrderSuccessPanel />;
   }
 
   return (
@@ -191,16 +200,19 @@ export function OrderForm() {
         )}
       </button>
       {status === "error" && message ? <p className="order-message error">{message}</p> : null}
-      {status === "success" ? (
-        <div
-          aria-label="Thank you for supporting our small business. Your song will be delivered in MP3 format via text within 48 hours of your payment being received. Please complete your order now so we can get to work."
-          className="venmo-payment-panel"
-        >
-          <a href={venmoUrl} rel="noreferrer" target="_blank">
-            Get Your Players Song
-          </a>
-        </div>
-      ) : null}
     </form>
+  );
+}
+
+export function OrderSuccessPanel() {
+  return (
+    <div
+      aria-label="Thank you for supporting our small business. Your song will be delivered in MP3 format via text within 48 hours of your payment being received. Please complete your order now so we can get to work."
+      className="venmo-payment-panel venmo-payment-panel-full"
+    >
+      <a href={venmoUrl} rel="noreferrer" target="_blank">
+        Get Your Players Song
+      </a>
+    </div>
   );
 }
