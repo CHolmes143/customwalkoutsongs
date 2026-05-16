@@ -135,9 +135,22 @@ a {
 }
 
 .hero-player {
+  align-items: center;
+  background: linear-gradient(180deg, #ffbd2e 0%, #f4a30b 100%);
+  border-radius: 14px;
+  color: #050505;
+  display: flex;
+  font-size: clamp(10px, 1.25vw, 23px);
+  font-weight: 900;
   height: 4.5%;
+  justify-content: center;
   left: 55.7%;
+  line-height: 1;
+  padding: 0 1.4%;
+  text-align: center;
+  text-indent: 0;
   top: 39.1%;
+  white-space: nowrap;
   width: 41.4%;
 }
 

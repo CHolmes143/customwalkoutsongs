@@ -5,7 +5,7 @@ export default function HomePage() {
     <main className="landing">
       <section className="landing-art landing-art-main" id="samples" aria-label="Custom walkout songs overview and song samples">
         <a className="landing-hotspot hero-player" href="/order">
-          Get Your Song
+          Get Your Player&apos;s Walkout Song!
         </a>
         <LandingSampleHotspots />
         <a className="landing-hotspot lower-player" href="/order">
