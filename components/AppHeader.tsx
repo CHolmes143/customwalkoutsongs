@@ -11,7 +11,7 @@ export function AppHeader() {
   return (
     <header className={isPublicPage ? "topbar public-topbar" : "topbar"}>
       <Link className="brand" href={isPublicPage ? "/" : "/teams"}>
-        Custom Walkout Song
+        CustomWalkoutSong.com
       </Link>
       {isPublicHome ? (
         <nav className="nav">
