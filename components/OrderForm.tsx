@@ -21,7 +21,6 @@ const initialForm: OrderFormPayload = {
 
 export function OrderForm() {
   const [form, setForm] = useState(initialForm);
-  const [paymentNote, setPaymentNote] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -47,7 +46,6 @@ export function OrderForm() {
       return;
     }
 
-    setPaymentNote(`${form.playerFirstName} ${form.playerLastName} #${form.jerseyNumber}`);
     setStatus("success");
     setMessage(result.message ?? "Order received.");
     setForm(initialForm);
@@ -200,7 +198,6 @@ export function OrderForm() {
           <a href={venmoUrl} rel="noreferrer" target="_blank">
             Get Your Players Song
           </a>
-          {paymentNote ? <small>Include this note: {paymentNote}</small> : null}
         </div>
       ) : null}
     </form>
