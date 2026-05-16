@@ -25,15 +25,11 @@ export async function POST(request: Request) {
 
   const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
   if (!webhookUrl) {
-    return NextResponse.json(
-      {
-        message: isLocalRequest
-          ? "Order received for local testing. Continue to Venmo."
-          : "Order received. Continue to Venmo.",
-        sheetConnected: false,
-      },
-      { status: 202 },
-    );
+    const message = isLocalRequest
+      ? "Order form is in local testing mode. Google Sheets is not connected yet."
+      : "Google Sheets is not connected yet. Please email customwalkoutsong@gmail.com to place your order.";
+
+    return NextResponse.json({ message, sheetConnected: false }, { status: isLocalRequest ? 202 : 503 });
   }
 
   const url = new URL(webhookUrl);
