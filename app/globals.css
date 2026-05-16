@@ -298,10 +298,14 @@ a {
 }
 
 .close-learn {
-  height: 13.5%;
+  height: 12.5%;
   left: 35.8%;
-  top: 79%;
+  top: 82%;
   width: 28.4%;
+}
+
+.close-learn.landing-cta {
+  box-shadow: 0 6px 0 #8f5200, 0 12px 20px rgba(0, 0, 0, 0.26);
 }
 
 .landing-audio-player {
