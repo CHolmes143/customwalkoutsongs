@@ -282,11 +282,19 @@ a {
 }
 
 .individual-basic {
-  height: 10.5%;
-  left: 5%;
-  text-indent: -9999px;
-  top: 64.4%;
-  width: 28.5%;
+  align-items: center;
+  display: flex;
+  font-size: clamp(12px, 1.5vw, 24px);
+  height: 9.4%;
+  justify-content: center;
+  left: 5.7%;
+  line-height: 1;
+  padding: 0 1.4%;
+  text-align: center;
+  text-indent: 0;
+  top: 64%;
+  white-space: nowrap;
+  width: 25.4%;
 }
 
 .close-learn {

@@ -18,7 +18,7 @@ export default function HomePage() {
         id="individual-packages"
         aria-label="Individual player packages"
       >
-        <a className="landing-hotspot individual-basic" href="/order">
+        <a className="landing-hotspot landing-cta individual-basic" href="/order">
           Order Now
         </a>
       </section>
