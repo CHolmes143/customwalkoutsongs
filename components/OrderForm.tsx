@@ -1,13 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { musicStyleOptions, orderFieldLabels, playerDivisionOptions, type OrderFormPayload } from "@/lib/orderForm";
+import { musicStyleOptions, orderFieldLabels, playerDivisionOptions, sportOptions, type OrderFormPayload } from "@/lib/orderForm";
 
 const teamSongHelpText =
   "Why is this information needed? This is one of the ways we ensure no teammates have a similar-sounding song.";
 const venmoUrl = "https://venmo.com/u/customwalkoutsong";
 
 const initialForm: OrderFormPayload = {
+  sport: "Baseball",
   playerDivision: "",
   teamName: "",
   playerFirstName: "",
@@ -63,6 +64,21 @@ export function OrderForm({ onSuccess }: OrderFormProps) {
   return (
     <form className="order-form" onSubmit={submitOrder}>
       <div className="form-grid">
+        <label className="field">
+          <span>{orderFieldLabels.sport} *</span>
+          <select
+            name="sport"
+            onChange={(event) => updateField("sport", event.target.value)}
+            required
+            value={form.sport}
+          >
+            {sportOptions.map((sport) => (
+              <option key={sport} value={sport}>
+                {sport}
+              </option>
+            ))}
+          </select>
+        </label>
         <label className="field">
           <span className="field-label">
             {orderFieldLabels.playerDivision} *

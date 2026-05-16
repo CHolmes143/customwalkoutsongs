@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { normalizeOrderPayload, orderFieldLabels, type OrderFormPayload } from "@/lib/orderForm";
 
 const requiredFields: Array<keyof OrderFormPayload> = [
+  "sport",
   "playerDivision",
   "playerFirstName",
   "playerLastName",

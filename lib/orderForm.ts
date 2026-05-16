@@ -10,7 +10,10 @@ export const playerDivisionOptions = ["6U", "8U", "10U", "12U", "14U"].flatMap((
   ["D1", "D2", "D3"].map((division) => `${ageGroup} ${division}`),
 );
 
+export const sportOptions = ["Baseball"];
+
 export const orderFieldLabels = {
+  sport: "Sport",
   playerDivision: "Player Division",
   teamName: "Team Name",
   playerFirstName: "Player First Name",
@@ -26,6 +29,7 @@ export type OrderFormPayload = Record<keyof typeof orderFieldLabels, string>;
 
 export function normalizeOrderPayload(input: Partial<OrderFormPayload>): OrderFormPayload {
   return {
+    sport: input.sport?.trim() || "Baseball",
     playerDivision: input.playerDivision?.trim() ?? "",
     teamName: input.teamName?.trim() ?? "",
     playerFirstName: input.playerFirstName?.trim() ?? "",
