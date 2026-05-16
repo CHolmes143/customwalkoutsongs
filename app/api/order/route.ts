@@ -41,9 +41,10 @@ export async function POST(request: Request) {
     body: JSON.stringify(payload),
     headers: { "Content-Type": "application/json" },
     method: "POST",
+    redirect: "manual",
   });
 
-  if (!response.ok) {
+  if (response.status >= 400) {
     return NextResponse.json({ message: "The order could not be sent. Please try again." }, { status: 502 });
   }
 
