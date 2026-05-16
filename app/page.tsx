@@ -55,8 +55,8 @@ export default function HomePage() {
           <article className="faq-item">
             <h3>Why do all of these samples have basically the same lyrics?</h3>
             <p>
-              They&apos;re essentially the same lyrics so you can more easily determine which music style
-              you like most without the additional variables of words, voice, and other differences.
+              They have essentially the same lyrics so you can more easily determine which style of
+              music is preferrred without the additional variables of words, voice, and so on.
             </p>
           </article>
           <article className="faq-item">
