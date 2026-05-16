@@ -15,6 +15,8 @@ const requiredFields: Array<keyof OrderFormPayload> = [
 export async function POST(request: Request) {
   const payload = normalizeOrderPayload((await request.json()) as Partial<OrderFormPayload>);
   const missingField = requiredFields.find((field) => !payload[field]);
+  const host = request.headers.get("host") ?? "";
+  const isLocalRequest = host.startsWith("localhost") || host.startsWith("127.0.0.1");
 
   if (missingField) {
     return NextResponse.json({ message: `${orderFieldLabels[missingField]} is required.` }, { status: 400 });
@@ -22,7 +24,7 @@ export async function POST(request: Request) {
 
   const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
   if (!webhookUrl) {
-    if (process.env.NODE_ENV !== "production") {
+    if (process.env.NODE_ENV !== "production" || isLocalRequest) {
       return NextResponse.json({
         message: "Order received for local testing. Continue to Venmo.",
         sheetConnected: false,
