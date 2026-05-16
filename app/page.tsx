@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main className="landing">
       <section className="landing-art landing-art-main" id="samples" aria-label="Custom walkout songs overview and song samples">
-        <a className="landing-hotspot hero-player" href="/order">
+        <a className="landing-hotspot landing-cta hero-player" href="/order">
           Get Your Player&apos;s Walkout Song!
         </a>
         <LandingSampleHotspots />
@@ -18,19 +18,19 @@ export default function HomePage() {
         id="individual-packages"
         aria-label="Individual player packages"
       >
-        <a className="landing-hotspot individual-basic" href="/order">
+        <a className="landing-hotspot landing-cta individual-basic" href="/order">
           Order Now
         </a>
       </section>
 
       <section className="landing-art landing-art-team" id="team-packages" aria-label="Team packages">
-        <a className="landing-hotspot team-order" href="/order">
+        <a className="landing-hotspot landing-cta team-order" href="/order">
           Order Now
         </a>
       </section>
 
       <section className="landing-art landing-art-close" aria-label="Making an All-Star Team is a big deal">
-        <a className="landing-hotspot close-learn" href="/order">
+        <a className="landing-hotspot landing-cta close-learn" href="/order">
           Order Your Song
         </a>
       </section>
