@@ -27,7 +27,7 @@ export async function POST(request: Request) {
   if (!webhookUrl) {
     const message = isLocalRequest
       ? "Order form is in local testing mode. Google Sheets is not connected yet."
-      : "Google Sheets is not connected yet. Please email customwalkoutsong@gmail.com to place your order.";
+      : "We're sorry we're not able to place your order, please email the above information to customwalkoutsong@gmail.com and we'll create your song right away!";
 
     return NextResponse.json({ message, sheetConnected: false }, { status: isLocalRequest ? 202 : 503 });
   }
