@@ -8,7 +8,7 @@ export const musicStyleOptions = [
 
 export const playerDivisionOptions = ["6U", "8U", "10U", "12U", "14U"].flatMap((ageGroup) =>
   ["D1", "D2", "D3"].map((division) => `${ageGroup} ${division}`),
-);
+).concat("Other");
 
 export const sportOptions = ["Baseball"];
 
