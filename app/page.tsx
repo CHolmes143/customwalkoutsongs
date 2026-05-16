@@ -53,6 +53,13 @@ export default function HomePage() {
             <p>No! We have hundreds of hype lyrics for each sport and we continue to think of more!</p>
           </article>
           <article className="faq-item">
+            <h3>Why do all of these samples have basically the same lyrics?</h3>
+            <p>
+              They&apos;re essentially the same lyrics so you can more easily determine which music style
+              you like most without the additional variables of words, voice, and other differences.
+            </p>
+          </article>
+          <article className="faq-item">
             <h3>What if I need an edit made so it can be used with the announcement app our team uses?</h3>
             <p>
               No problem, just send an email to customwalkoutsong@gmail.com letting us know which needs
