@@ -196,13 +196,9 @@ export function OrderForm() {
       {status === "success" ? (
         <div className="venmo-payment-panel">
           <h2>Thank You!</h2>
-          <p>
-            Your song will be sent via text within the next 48 hours. Email customwalkoutsong@gmail.com
-            with any questions or concerns.
-          </p>
-          <p>Next step: pay with Venmo.</p>
+          <p>We&apos;ll get to work as soon as your payment has been received!</p>
           <a href={venmoUrl} rel="noreferrer" target="_blank">
-            Pay @customwalkoutsong
+            Get Your Players Song
           </a>
           {paymentNote ? <small>Include this note: {paymentNote}</small> : null}
         </div>
