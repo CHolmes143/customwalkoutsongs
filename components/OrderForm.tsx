@@ -211,8 +211,13 @@ export function OrderSuccessPanel() {
       className="venmo-payment-panel venmo-payment-panel-full"
     >
       <a href={venmoUrl} rel="noreferrer" target="_blank">
-        Get Your Players Song
+        Pay now to complete your order
       </a>
+      <div className="thank-you-copy">
+        <p>THANK YOU for supporting our small business!</p>
+        <p>Your song will be delivered in MP3 format via text within 48 hours of your payment being received.</p>
+        <strong>PLEASE COMPLETE YOUR ORDER NOW SO WE CAN GET TO WORK!</strong>
+      </div>
     </div>
   );
 }

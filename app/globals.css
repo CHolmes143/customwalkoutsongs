@@ -532,20 +532,23 @@ a {
 }
 
 .venmo-payment-panel {
-  align-items: end;
   aspect-ratio: 1366 / 768;
-  background-image: url("/landing-v2/thank-you-page.png");
+  background-image:
+    linear-gradient(rgba(0, 140, 18, 0.12), rgba(0, 120, 16, 0.06)),
+    url("/landing-v2/thank-you-grass.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: 2px solid #ffad1b;
   border-radius: 14px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: clamp(28px, 6vw, 84px);
+  justify-content: flex-start;
   margin-top: 18px;
   min-height: 280px;
   overflow: hidden;
-  padding: 0 18px 28px;
+  padding: clamp(18px, 3vw, 34px) clamp(18px, 4vw, 54px) clamp(28px, 4vw, 54px);
   text-align: center;
 }
 
@@ -558,9 +561,37 @@ a {
   font-size: clamp(16px, 2.4vw, 26px);
   font-weight: 900;
   justify-content: center;
+  margin: 0 auto;
   padding: 15px 24px;
   text-decoration: none;
-  width: min(100%, 360px);
+  width: min(100%, 520px);
+}
+
+.thank-you-copy {
+  align-self: center;
+  color: #050505;
+  display: grid;
+  gap: 14px;
+  margin-top: clamp(20px, 7vw, 96px);
+  max-width: 940px;
+  width: 100%;
+}
+
+.thank-you-copy p,
+.thank-you-copy strong {
+  background: rgba(196, 150, 22, 0.76);
+  border-radius: 16px;
+  display: block;
+  font-size: clamp(18px, 3.1vw, 43px);
+  font-weight: 500;
+  line-height: 1.08;
+  margin: 0;
+  padding: 8px clamp(12px, 2vw, 24px);
+}
+
+.thank-you-copy strong {
+  font-size: clamp(17px, 2.7vw, 38px);
+  font-weight: 900;
 }
 
 .venmo-payment-panel-full {
