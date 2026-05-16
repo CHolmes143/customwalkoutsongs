@@ -179,7 +179,6 @@ a {
 }
 
 .individual-basic,
-.team-order,
 .close-learn {
   align-items: center;
   display: flex;
@@ -279,13 +278,6 @@ a {
   left: 5%;
   top: 64.4%;
   width: 28.5%;
-}
-
-.team-order {
-  height: 7.2%;
-  left: 8.6%;
-  top: 72%;
-  width: 34.8%;
 }
 
 .close-learn {

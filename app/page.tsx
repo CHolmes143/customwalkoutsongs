@@ -23,11 +23,7 @@ export default function HomePage() {
         </a>
       </section>
 
-      <section className="landing-art landing-art-team" id="team-packages" aria-label="Team packages">
-        <a className="landing-hotspot landing-cta team-order" href="/order">
-          Order Now
-        </a>
-      </section>
+      <section className="landing-art landing-art-team" id="team-packages" aria-label="Team packages" />
 
       <section className="landing-art landing-art-close" aria-label="Making an All-Star Team is a big deal">
         <a className="landing-hotspot landing-cta close-learn" href="/order">
